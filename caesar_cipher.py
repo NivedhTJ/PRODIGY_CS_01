@@ -1,7 +1,7 @@
 def caesar_encrypt(text, shift):
     encrypted_text = ""
     for char in text:
-        if char.isalpha(): # checks if char is in upper case
+        if char.isalpha(): # checks if char an alphabet 
             shift_base = 65 if char.isupper() else 97 # if char is in upper case ASCII value of 'A' is 65 else 'a'is 97 
             encrypted_text += chr((ord(char) - shift_base + shift) % 26 + shift_base)
             #using %26 so that characters stay in the A-Z or a-z range
